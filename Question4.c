@@ -1,18 +1,18 @@
 #include <stdio.h>
 
-// Function to calculate (a^b) % m
+
 int powerMod(int a, int b, int m) {
     int result = 1;
-    a = a % m; // Take modulo of base
+    a = a % m; 
 
     while (b > 0) {
-        // If b is odd, multiply result with base and take modulo
+        
         if (b & 1)
             result = (result * a) % m;
 
-        // b must be even now
-        b = b >> 1; // b = b/2
-        a = (a * a) % m; // Update base
+
+        b = b >> 1; 
+        a = (a * a) % m; 
     }
     return result;
 }
