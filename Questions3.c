@@ -19,7 +19,7 @@ int main() {
     int *c = (int*)malloc((n + m) * sizeof(int));
     int i = 0, j = 0, k = 0;
 
-    // Merge both arrays into c
+    
     while (i < n && j < m) {
         if (a[i] <= b[j]) {
             c[k++] = a[i++];
@@ -28,17 +28,17 @@ int main() {
         }
     }
 
-    // Insert remaining elements of a into c
+
     while (i < n) {
         c[k++] = a[i++];
     }
 
-    // Insert remaining elements of b into c
+
     while (j < m) {
         c[k++] = b[j++];
     }
 
-    // Output the merged array c
+    
     for (int l = 0; l < k; l++) {
         printf("%d ", c[l]);
     }
